@@ -27,7 +27,7 @@ PY
 sdk=${ANDROID_SDK_ROOT:-${ANDROID_HOME:-$HOME/Android/Sdk}}
 export ANDROID_HOME="$sdk" ANDROID_SDK_ROOT="$sdk"
 if [ ! -x "$sdk/build-tools/36.0.0/aapt2" ] || [ ! -d "$sdk/platforms/android-36" ]; then
-    "$sdk/cmdline-tools/latest/bin/sdkmanager" 'build-tools;36.0.0' 'platforms;android-36'
+    sdkmanager 'build-tools;36.0.0' 'platforms;android-36'
 fi
 
 export PATH="$(dirname "$compiler"):$PATH"
